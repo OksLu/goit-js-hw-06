@@ -9,10 +9,11 @@ function handleSubmit(event) {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    window.alert("Будь ласка, заповніть всі поля");
+    return window.alert("Будь ласка, заповніть всі поля");
   }
 
-  console.log(`Email: ${email.value}, password: ${password.value}`);
+  const userData = { email: email.value, password: password.value };
+  console.log(userData);
 
   event.currentTarget.reset();
 }
